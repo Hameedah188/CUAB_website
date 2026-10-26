@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#contacts {
+    text-decoration: underline;
+    text-decoration-color: brown;
+    text-decoration-thickness: 
+}
+
+.links {
+    min-height: 60px;
+    padding: 8px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background-color: rgb(51, 135, 231);
+    color: white;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+#logo-name {
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.links nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    flex-shrink: 1;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+.links nav::-webkit-scrollbar {
+    display: none;
+}
+.links nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+}
+
+.links nav a:hover {
+    color: white;
+}
+
+.menu {
+    display: none;
+}
+
+#apply {
+    border-radius: 25px;
+    padding: 8px 18px;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    background-color: rgb(236, 212, 76);
+    color: black;
+
+    border: 1px solid black;
+    cursor: pointer;
+
+    transition: background-color 0.4s ease,
+                box-shadow 0.4s ease,
+                transform 0.3s ease;
+}
+
+#apply:hover {
+    background-color: rgb(137, 214, 247);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.intro {
+    min-height: 350px;
+
+    background-image:
+        linear-gradient(
+            to left,
+            rgba(0, 35, 70, 0.95),
+            rgba(0, 35, 70, 0.15)
+        ),
+        url("img/auditorium-edited.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 60px 5%;
+}
+
+.hero-content {
+    width: min(650px, 100%);
+    text-align: right;
+    color: white;
+}
+
+#head {
+    font-size: clamp(14px, 2vw, 23px);
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+#name {
+    font-size: clamp(35px, 5vw, 40px);
+    color: rgb(236, 212, 76);
+
+    font-family: "Lilita One", cursive;
+    font-weight: 700;
+    font-style: oblique;
+
+    margin-bottom: 20px;
+}
+
+#body1 {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}

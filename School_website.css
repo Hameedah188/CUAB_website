@@ -1,0 +1,710 @@
+/* =========================
+   GENERAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.links {
+    min-height: 60px;
+    padding: 8px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background-color: rgb(51, 135, 231);
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+#logo-name {
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.links nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    flex-shrink: 1;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+.links nav::-webkit-scrollbar {
+    display: none;
+}
+.links nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+}
+
+.links nav a:hover {
+    color: white;
+}
+
+.menu {
+    display: none;
+}
+
+#apply {
+    border-radius: 25px;
+    padding: 8px 18px;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    background-color: rgb(236, 212, 76);
+    color: black;
+
+    border: 1px solid black;
+    cursor: pointer;
+
+    transition: background-color 0.4s ease,
+                box-shadow 0.4s ease,
+                transform 0.3s ease;
+}
+
+#apply:hover {
+    background-color: rgb(137, 214, 247);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.intro {
+    min-height: 550px;
+
+    background-image:
+        linear-gradient(
+            to left,
+            rgba(0, 35, 70, 0.95),
+            rgba(0, 35, 70, 0.15)
+        ),
+        url("img/auditorium-edited.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 60px 5%;
+}
+
+.hero-content {
+    width: min(650px, 100%);
+    text-align: right;
+    color: white;
+}
+
+#welcome {
+    font-size: clamp(14px, 2vw, 23px);
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+#motto {
+    font-size: clamp(35px, 5vw, 40px);
+    color: rgb(236, 212, 76);
+
+    font-family: "Lilita One", cursive;
+    font-weight: 700;
+    font-style: oblique;
+
+    margin-bottom: 20px;
+}
+
+#body1 {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#programmes {
+    background: rgb(236, 212, 76);
+
+    padding: 14px 22px;
+
+    font-size: 16px;
+
+    border: none;
+    border-radius: 35px;
+
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#programmes:hover {
+    background-color: rgb(15, 118, 162);
+    color: white;
+
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+
+    transform: translateY(-2px);
+}
+
+#about {
+    color: rgb(236, 212, 76);
+
+    background-color: transparent;
+
+    font-size: 16px;
+
+    border: 2px solid whitesmoke;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#about:hover {
+    color: black;
+    background-color: rgb(51, 135, 231);
+
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 45px 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 25px;
+
+    text-align: center;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.feature img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.feature h4 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #777;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 40px auto 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 20px;
+
+    box-shadow:
+        -15px 15px 10px rgba(10, 15, 9, 0.35);
+}
+
+.about-details {
+    flex: 1;
+}
+
+.about-details h4 {
+    margin-bottom: 12px;
+
+    color: rgb(52, 157, 52);
+
+    font-size: 17px;
+}
+
+.about-details h1 {
+    color: rgb(20, 85, 197);
+
+    font-family:
+        "Franklin Gothic Medium",
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-weight: 600;
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    margin-bottom: 20px;
+}
+
+.about-details p {
+    font-size: 17px;
+
+    color: rgb(128, 128, 128);
+
+    word-spacing: 2px;
+
+    line-height: 1.7;
+
+    max-width: 550px;
+}
+
+#learn {
+    margin-top: 30px;
+
+    color: white;
+
+    font-size: 17px;
+
+    background-color: rgb(20, 85, 197);
+
+    width: 160px;
+    height: 50px;
+
+    border-radius: 25px;
+
+    border: 3px solid rgb(52, 157, 52);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+#learn:hover {
+    background-color: rgb(52, 157, 52);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   ACADEMICS
+========================= */
+
+.programmes {
+    background-color: #e6fff8;
+    
+    padding: 70px 5%;
+}
+
+.head {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+#academic {
+    color: rgb(52, 157, 52);
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+#future {
+    font-size: clamp(28px, 4vw, 42px);
+
+    color: #222;
+}
+
+.courses {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.course-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    min-height: 180px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+    color: rgb(20, 85, 197);
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+.course-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .links {
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .links nav {
+        gap: 20px;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about {
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    /* NAVIGATION */
+
+    .links nav {
+        gap: 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+    }
+
+    .links nav::-webkit-scrollbar {
+        display: none;
+
+    }
+
+    .links {
+        flex-direction: column;
+
+        padding: 10px 80px;
+
+        gap: 15px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    #logo-name {
+        font-size: 18px;
+    }
+
+    .links nav {
+        width: 100%;
+
+        margin-left: 40px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .links nav a {
+        font-size: 15px;
+    }
+
+    #apply {
+        font-size: 15px;
+    }
+
+
+    /* HERO */
+
+    .intro {
+        min-height: 600px;
+
+        padding: 50px 25px;
+
+        justify-content: center;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    #welcome {
+        font-size: 19px;
+    }
+                                                   
+    #motto {
+        font-size: 38px;
+
+        line-height: 1.1;
+    }
+
+    #body1 {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    #programmes,
+    #about {
+        font-size: 15px;
+    }
+
+
+    /* FEATURES */
+
+    .features {
+        width: 90%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px 15px;
+
+        padding: 40px 0;
+    }
+
+    .feature:last-child {
+        grid-column: 1 / -1;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        width: 90%;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        margin-bottom: 60px;
+    }
+
+    .about-image,
+    .about-details {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: 100%;
+
+        height: 280px;
+
+        box-shadow:
+            -8px 8px 8px rgba(10, 15, 9, 0.35);
+    }
+
+    .about-details h1 {
+        font-size: 30px;
+    }
+
+    .about-details p {
+        font-size: 16px;
+    }
+
+
+    /* ACADEMICS */
+
+    .programmes {
+        padding: 50px 20px;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .course-card {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature:last-child {
+        grid-column: auto;
+    }
+
+    #motto {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    #programmes,
+    #about {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 230px;
+    }
+
+}

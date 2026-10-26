@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+    <main class="login-container">
+        <section class="form-section">
+            <div class="logo-name">
+            <img src="img\crescent_logo.webp" alt="">
+            <div class="in">
+            <h1>Crescent University</h1>
+            <p>Knowledge and faith</p> 
+            </div>
+            </div>
+            <div class="welcome">
+            <h1>Welcome Back</h1>
+            <p>Sign in to your academics portal, resources and more.</p>
+            </div>
+        </section>
+
+
+
+        <div>
+
+        </div>
+
+        <section class="login-card">
+            <a id="homepage" href="School_website.html">HOME</a>
+            <p>WELCOME BACK</p>
+            <H1>Login to Your Account</H1><br>
+            <p>Access your student portal, check updates, manage<br> your academic activities and more.</p><br><br><br>
+            <form>
+
+        <!--HERE, for="Student-id" connects the label to the input througj the matching id-->
+
+            <label for="student-id">Matriculation Number / Student ID</label><br> 
+            <input type="text" id="student-id" placeholder="Username or Student ID" required><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" placeholder="Enter your password" required><br><br>
+
+
+        <!--This a implicit label association: The checkbox is inside the label so you don't need a "for" or "id"
+        to associte them. It improves accessibility-->
+
+            <div class="recover">
+                <label>
+                    <input id="remember" type="checkbox">Remember me
+                </label>
+                    <a href="">Forgot password?</a>
+            </div>
+
+            <div>
+                <a href=""><button id="login-btn">Login</button></a><br>
+                <divider id="divider">OR</divider><br>
+                <a  id="google" href="google.com">Continue with Google</a>
+                <p>New Student?</p>
+                <a>Apply Now</a>
+
+                 
+            </div>
+
+
+            </form>
+
+
+        </section>
+    </main>
+    
+    
+</body>
+</html>
